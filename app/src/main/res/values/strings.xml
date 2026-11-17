@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Smart Toolbox AI</string>
+    <string name="accessibility_description">Lets the floating toolbox lock the screen, open recent apps and go back. It never reads your screen or data.</string>
+</resources>

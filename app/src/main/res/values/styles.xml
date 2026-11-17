@@ -1,0 +1,9 @@
+<resources>
+    <style name="Theme.SmartToolbox.Splash" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">#FFFFFF</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_splash</item>
+        <item name="postSplashScreenTheme">@style/Theme.SmartToolbox</item>
+    </style>
+    <style name="Theme.SmartToolbox" parent="android:Theme.Material.Light.NoActionBar" />
+    <style name="Theme.SmartToolbox.Translucent" parent="android:Theme.Translucent.NoTitleBar" />
+</resources>
