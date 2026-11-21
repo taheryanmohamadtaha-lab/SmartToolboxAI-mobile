@@ -223,15 +223,15 @@ fun SettingsScreen(vm: MainViewModel, back: () -> Unit) {
         SectionCard(t("Appearance", "ظاهر")) {
             Text(t("Theme", "تم"))
             ChipRow {
-                listOf(0 to t("System", "سیستم"), 1 to t("Light", "روشن"), 2 to t("Dark", "تیره"), 3 to "AMOLED").forEach { (m, n) -> Chip(n, vm.themeMode == m) { vm.setTheme(m) } }
+                listOf(0 to t("System", "سیستم"), 1 to t("Light", "روشن"), 2 to t("Dark", "تیره"), 3 to "AMOLED").forEach { (m, n) -> Chip(n, vm.themeMode == m) { vm.changeTheme(m) } }
             }
             Text(t("Accent color", "رنگ تاکیدی"))
-            ColorRow(vm.accent) { vm.setAccent(it) }
+            ColorRow(vm.accent) { vm.changeAccent(it) }
             Text(t("Language", "زبان"))
             ChipRow {
-                Chip(t("System", "سیستم"), vm.lang == "system") { vm.setLang("system") }
-                Chip("English", vm.lang == "en") { vm.setLang("en") }
-                Chip("فارسی", vm.lang == "fa") { vm.setLang("fa") }
+                Chip(t("System", "سیستم"), vm.lang == "system") { vm.changeLang("system") }
+                Chip("English", vm.lang == "en") { vm.changeLang("en") }
+                Chip("فارسی", vm.lang == "fa") { vm.changeLang("fa") }
             }
         }
         SectionCard(t("General", "عمومی")) {

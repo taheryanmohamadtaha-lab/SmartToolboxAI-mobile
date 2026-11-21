@@ -25,9 +25,9 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
     var accent by mutableIntStateOf(prefs.appAccent); private set
     var lang by mutableStateOf(prefs.lang); private set
 
-    fun setTheme(m: Int) { themeMode = m; prefs.themeMode = m }
-    fun setAccent(c: Int) { accent = c; prefs.appAccent = c }
-    fun setLang(l: String) { lang = l; prefs.lang = l }
+    fun changeTheme(m: Int) { themeMode = m; prefs.themeMode = m }
+    fun changeAccent(c: Int) { accent = c; prefs.appAccent = c }
+    fun changeLang(l: String) { lang = l; prefs.lang = l }
     fun reload() { themeMode = prefs.themeMode; accent = prefs.appAccent; lang = prefs.lang }
     fun isFa(): Boolean = lang == "fa" || (lang == "system" && Locale.getDefault().language == "fa")
 }
